@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<title>Backwell School Learning Platform</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Copyright©2009 Frogtrade Limited. All rights reserved -->
+
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/main.js"></script>
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/jquery.js"></script>
+<link type="text/css" rel="stylesheet" href="Backwell%20School%20Learning%20Platform_files/lightness-ui.css">
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/js_insertObject.js"></script>
+<meta name="robots" content="noindex, nofollow">
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/jquery-ui.js"></script>
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/jquery-fixes.js"></script>
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/frog3.js"></script>
+<script type="text/javascript" src="Backwell%20School%20Learning%20Platform_files/activate_frog3.js"></script>
+<style type="text/css"><!--body { COLOR:black; FONT-FAMILY:Arial; MARGIN-BOTTOM:0px; MARGIN-LEFT:0px; MARGIN-TOP:0px;	MARGIN-RIGHT:0px; FONT-SIZE:None;}TD {FONT-FAMILY:Arial;FONT-SIZE:None;}P {FONT-SIZE:None;}DIV {FONT-SIZE:None;}.HTEXT {COLOR:black; FONT-WEIGHT: bold;}A.ROLLOVER { FONT-WEIGHT: normal; TEXT-DECORATION: none;}A.ROLLOVER:hover { FONT-WEIGHT: normal; TEXT-DECORATION: none;}HR { HEIGHT: 1px;}FORM {MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px;}H1 {COLOR: black; FONT-SIZE: x-large; FONT-WEIGHT: bold;}H2 {COLOR: black; FONT-SIZE: large; FONT-WEIGHT: bold;}H3 {COLOR: black; FONT-SIZE: medium; FONT-WEIGHT: bold;}H4 {COLOR: black; FONT-SIZE: small; FONT-WEIGHT: bold;}H5 {COLOR: black; FONT-SIZE: x-small; FONT-WEIGHT: bold;}.editable_area { border: 1px solid #ddddee; width: 98%; padding-top: 6px; padding-bottom:  6px; position: relative; }.alt_518853 body {background-color:white; COLOR:black; FONT-FAMILY:Arial; MARGIN-BOTTOM:0px; MARGIN-LEFT:0px; MARGIN-TOP:0px; MARGIN-RIGHT:0px; FONT-SIZE:medium;}.alt_518853 TD {FONT-FAMILY:Arial;FONT-SIZE:medium;}.alt_518853 P {FONT-SIZE:medium;}.alt_518853 DIV {FONT-SIZE:medium;}.alt_518853 .HTEXT {COLOR:black; FONT-WEIGHT: bold;}.alt_518853 A.ROLLOVER {}.alt_518853 A.ROLLOVER:hover {}.alt_518853 HR { HEIGHT: 1px;}.alt_518853 FORM {MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px;}.alt_518853 H1 {COLOR: black; FONT-SIZE: x-large; FONT-WEIGHT: bold;}.alt_518853 H2 {COLOR: black; FONT-SIZE: large; FONT-WEIGHT: bold;}.alt_518853 H3 {COLOR: black; FONT-SIZE: medium; FONT-WEIGHT: bold;}.alt_518853 H4 {COLOR: black; FONT-SIZE: small; FONT-WEIGHT: bold;}.alt_518853 H5 {COLOR: black; FONT-SIZE: x-small; FONT-WEIGHT: bold;}.alt_517171 body {background-color:#458B00; COLOR:black; FONT-FAMILY:Arial; MARGIN-BOTTOM:0px; MARGIN-LEFT:0px; MARGIN-TOP:0px; MARGIN-RIGHT:0px; FONT-SIZE:None;}.alt_517171 TD {FONT-FAMILY:Arial;FONT-SIZE:None;}.alt_517171 P {FONT-SIZE:None;}.alt_517171 DIV {FONT-SIZE:None;}.alt_517171 .HTEXT {COLOR:black; FONT-WEIGHT: bold;}.alt_517171 A.ROLLOVER { FONT-WEIGHT: normal; TEXT-DECORATION: none;}.alt_517171 A.ROLLOVER:hover { FONT-WEIGHT: normal; TEXT-DECORATION: none;}.alt_517171 HR { HEIGHT: 1px;}.alt_517171 FORM {MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px;}.alt_517171 H1 {COLOR: black; FONT-SIZE: x-large; FONT-WEIGHT: bold;}.alt_517171 H2 {COLOR: black; FONT-SIZE: large; FONT-WEIGHT: bold;}.alt_517171 H3 {COLOR: black; FONT-SIZE: medium; FONT-WEIGHT: bold;}.alt_517171 H4 {COLOR: black; FONT-SIZE: small; FONT-WEIGHT: bold;}.alt_517171 H5 {COLOR: black; FONT-SIZE: x-small; FONT-WEIGHT: bold;}#login_form_container_ { text-align: right}.item_ { display: block; margin: 5px; }.item_ img {vertical-align:text-bottom;}.label_ { color: #ffffff; position: relative; bottom: 2px; }input.button { position: relative; top: 1px; }body {background-color:#458B00;}--></style>
+<script type="text/javaScript">
+<!--
+//-->
+</script>
+
+<script type="text/javaScript">
+<!--
+function text_do_link (serialized_array) {
+	if (serialized_array)
+	{
+		link_object = unserialize_array(serialized_array);
+		link_val     = link_object[0].toString();
+		link_type    = link_object[1];
+		link_target  = link_object[2];
+		link_display = link_object[3];
+
+		if (link_target == '') link_target = 'current';
+		var var_location;
+		switch(link_type)
+		{
+			case 'i':
+				temp_value = link_val.split('|');
+				var_location = '/index.phtml?d='+temp_value[0];
+				ftpr_go_to_location(var_location,link_target);
+			break;
+			case 'e':
+				temp_value = link_val.split('|');
+				ftpr_go_to_location(temp_value[0],link_target);
+			break;
+			case 'a':
+				link_val_array = link_val.split(',');
+				var var_function_name = link_val_array[0];
+				var var_function_args = link_val_array.slice(1);
+				var var_eval_string = var_function_name+'(\''+var_function_args.join(',')+'\');';
+				eval(var_eval_string);
+			break;
+			case 'f':
+				temp_value = link_val.split('|');
+				var_location = temp_value[0];
+				ftpr_go_to_location(link_val,link_target);
+			break;
+			case 'm':
+				ftpr_go_to_location(link_val,'current');
+			break;
+			case 'x':
+				var_location = '/association.phtml?lookup=' + link_val + '&cid=74';
+				ftpr_go_to_location(var_location,link_target);
+			break;
+			default:
+				// do nothimg
+			break;
+		}
+	}
+	return false;
+ }
+function loginbox_img_submit (e) {
+				if(!e) var e = window.event;
+				if(e.keyCode == 13)
+				{
+					document.client_login_form_.submit();
+				}
+			 }
+function get_this_url () {return '/index.phtml?d=517171'; }
+function check_powered_message () {
+		var el = $('div#r4234');
+		var prnt = $.browser.msie ? 'div.ie_container' : 'div.ajax_qe';
+
+		if(window.parent != window || el.parents(prnt + ':first').next().attr('id') === 'fixed_footer') {
+			el.html('').hide();
+            $('.turn').hide();
+		}
+	 }
+$(document).ready(function()
+		{
+    if(_F.pages.length && typeof activate_frog3 == 'function') {
+        $('.nested_page_active_area, .inner').each(function() {
+            var i = _F.pages.length,
+            n = null, m = null, p = null, par = null, found = false;
+            n = $(this).hasClass('nested_page_active_area') ? $(this).parents('.nested_page:first') : $(this).parents('.s_folder_tabs:first');
+
+            while(i--) {
+                p = _F.pages[i];
+                par = _F.parent[i];
+                var sel_id = n.attr('id')
+                if(typeof sel_id != 'undefined'){
+                    m = sel_id.match('np_' + p);
+                    if(m !== null) {
+                        found = false;
+                        for(actPar in _F.activate)
+                        {
+                            if(_F.activate[actPar]==par)
+                            {
+                                found=true;
+                                break;
+                            }
+                        }
+                        if(found == false)
+                        {
+                            _F.activate.push(par);
+                        }
+                        delete _F.pages[i];
+                        delete _F.parent[i];
+                        i = 0;
+                    }
+                }
+            }
+        });
+
+        var i = _F.activate.length,
+        p = null;
+
+        while(i--) {
+            p = _F.activate[i];
+            activate_frog3(p, 1, 'document');
+        }
+    }});
+//-->
+</script>
+
+<script type="text/javaScript">
+<!--
+//-->
+</script>
+</head>
+<body bgcolor="#458B00" style="font-family: Arial; color: black;" onload="document.body.style.fontFamily = 'Arial';;document.body.style.color = 'black';;check_powered_message();recheck_body_size();"><div id="top_menu"></div><div id="add_page_div"><a id="add_to_page" class="click_setup png" style="display: none; visibility: hidden;">Edit Page Contents</a></div>
+
+                <table cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><div id="np_517171-1" class="brick s_box" type="Boxes, Margins and Background Images" dfid=""><table style="border-color: #808080; border-style: none; border-width: 1;" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td class="component_active_area" style="background-color: ;background-image:url(http://frog.backwellschool.net/user/74/140366.jpg?bg=1); background-position: top left; BACKGROUND-REPEAT: no-repeat" align="left" valign="top"><div id="np_517182-1" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="50%"> <div id="np_517172-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 400px; "></div></div><div id="np_517172-2" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 250px; "></div></div><div id="np_517172-3" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 400px; "></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_517174-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 20px; "></div></div><div id="np_517174-2" class="nested_page s_page_in_page_adv" type="Nested Page / User Component" dfid="713902"><div id="np_518853-1" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518854-1" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_518853" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><img src="Backwell%20School%20Learning%20Platform_files/140508.png" border="0"></td></tr></tbody></table></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/user/74/140504.png?bg=1); background-repeat: repeat-x" class="component_active_area" align="center" valign="top" width="100%"> </td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518856-1" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_518853" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><img src="Backwell%20School%20Learning%20Platform_files/140509.png" border="0"></td></tr></tbody></table></div></td>
+</tr></tbody></table>
+</div><div id="np_518853-2" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/user/74/140506.png?bg=1); background-repeat: repeat-y" class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518857-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 20px; height: 0px; "></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="100%"> <div id="np_518858-1" class="brick s_p_in_p_edit" type="Nested Page / User Component Active Area" dfid=""><div class="nested_page_inactive_area nested_page_area"><div id="np_518863-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 30px; "></div></div><div id="np_518863-2" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_517171" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><p align="center"><img src="Backwell%20School%20Learning%20Platform_files/140092.png" border="0"></p></td></tr></tbody></table></div><div id="np_518863-3" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 50px; "></div></div><div id="np_518863-4" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518849-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 25px; height: 1px; "></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="100%"> <div id="np_518850-1" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_517171" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><p align="center"><font color="#ffffff"><strong>To log into&nbsp;TOAD, please enter your school username and password in the boxes below.</strong></font></p></td></tr></tbody></table></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518851-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 25px; height: 1px; "></div></div></td>
+</tr></tbody></table>
+</div><div id="np_518863-5" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 30px; "></div></div><div id="np_518863-6" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="50%"> <div id="np_517178-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 25px; "></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_517179-1" class="brick s_client_login" type="User Login" dfid=""><div id="login_form_container_"><form name="client_login_form_" action="/index.phtml?d=517171&amp;destination_page=" method="post"><div class="item_"><span class="label_">u:  </span><input style="width:140" name="client_username" onkeydown="loginbox_img_submit(event);" type="text"></div><div class="item_"><span class="label_">p:  </span><input style="width:140" name="client_password" onkeydown="loginbox_img_submit(event);" type="password"></div><div class="item_"><a href="javascript:document.client_login_form_.submit();"><img src="Backwell%20School%20Learning%20Platform_files/115654.png" alt="Login" border="0"></a></div><input name="client_login_mode" value="login" type="hidden"></form></div></div><div id="np_517179-2" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 170px; height: 1px; "></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="50%"> </td>
+</tr></tbody></table>
+</div><div id="np_518863-7" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 100%; height: 30px; "></div></div><div id="np_518863-8" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_517171" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><p align="center"><a class="ROLLOVER" href="javascript:open_toolkit('0');" v="open_toolkit,0" t="a"><font color="#526F35" size="1">Open Toolkit!</font></a></p></td></tr></tbody></table></div></div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/user/74/140505.png?bg=1); background-repeat: repeat-y" class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518859-1" class="brick s_addspace" type="Blank Space" dfid=""><div style="overflow: hidden; font-size: 0px; width: 20px; height: 0px; "></div></div></td>
+</tr></tbody></table>
+</div><div id="np_518853-3" class="brick s_table_3_columns" type="3 Columns" dfid=""><table style="" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518860-1" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_518853" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><img src="Backwell%20School%20Learning%20Platform_files/140507.png" border="0"></td></tr></tbody></table></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/user/74/140503.png?bg=1); background-repeat: repeat-x" class="component_active_area" align="center" valign="top" width="100%"> </td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="0%"> <div id="np_518862-1" class="brick s_text" type="Text and Pictures" dfid=""><table class="alt_518853" cellpadding="0" cellspacing="0" border="0" width="100%"><tbody><tr><td><img src="Backwell%20School%20Learning%20Platform_files/140510.png" border="0"></td></tr></tbody></table></div></td>
+</tr></tbody></table>
+</div></div></td>
+<td style="background-image:url(http://frog.backwellschool.net/sysicons/spacer.gif?bg=1); " class="component_active_area" align="center" valign="top" width="50%"> </td>
+</tr></tbody></table>
+</div></td></tr></tbody></table></div>
+                </td></tr></tbody></table><div id="r4234" style="position: relative;text-align: center;width: 100%;"><div style="z-index: 11;position: static;display: inline;">Powered by <a class="ROLLOVER" href="http://www.frogtrade.com/index.phtml?d=2534670" target="_blank"><b>Frog</b></a></div></div>
+
+</body></html>
